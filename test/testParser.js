@@ -211,7 +211,7 @@ describe("error handling",function(){
   });
 
   it("throws error on missing value when value is unquoted",function(){
-    assert.throws(
+    chaiAssert.throws(
       () => {
         kvParser.parse("key=")
       },
@@ -219,7 +219,7 @@ describe("error handling",function(){
   });
 
   it("throws error on missing value when value is quoted",function(){
-    assert.throws(
+    chaiAssert.throws(
       () => {
         kvParser.parse("key=\"value")
       },
